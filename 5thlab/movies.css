@@ -1,0 +1,85 @@
+/* *{
+    border: thin solid red;
+} */
+
+movies{
+    background-color: mintcream;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:1em;
+}
+
+movie{
+    display: list-item;
+    list-style-type: disc;
+    margin-left: 2em;
+    padding: 0.25em;
+}
+
+title:lang(en){
+    display: inline;
+}
+
+
+title{
+    display: none;
+}
+
+year::before{
+    content: "(";
+}
+
+year::after{
+    content: "):";
+}
+
+rating::after{
+    content: "/10";
+}
+
+votes::before{
+    content: " from ";
+}
+
+votes::after{
+    content: " ratings";
+}
+
+genre,rating{
+    color:white;
+    padding: 0.25em;
+    border-radius: 0.25em;
+}
+genre{
+    background-color: blueviolet;
+    text-align: center;
+    width: 5em;
+    display: inline-block;
+}
+
+rating{
+    background-color: hotpink;
+}
+
+movie:hover::after{
+    background-color: gold;
+    border-radius: 0.25em;
+    padding:0.25em;
+    color:blueviolet;
+    font-size: large;
+    content: "https://www.imdb.com/title/tt" attr(id);
+}
+
+movie[mpa-rating=R] > title,
+ movie[mpa-rating=R] > year,
+ movie[mpa-rating=NC-17] > title,
+ movie[mpa-rating=NC-17] > year{
+    color: red;
+    font-weight: bold;
+}
+
+movie:is([mpa-rating=R],[mpa-rating=NC-17])
+>:is(title.year){
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE menu SYSTEM "assignment.dtd">
+<menu name="Main">
+    <menu name="File">
+        <item name="New">New</item>
+        <item name="Open">Open</item>
+        <item name="Save">Save</item>
+        <item name="Save As">Save As</item>
+        <separator/>
+        <item name="Exit">Exit</item>
+    </menu>
+
+    <menu name="File">
+        <item name="Undo">Undo</item>
+        <item name="Redo">Redo</item>
+        <separator/>
+        <item name="Cut">Cut</item>
+        <item name="Copy">Copy</item>
+        <item name="Paste">Paste</item>
+    </menu>
+
+    <menu name="Help">
+        <item name="About">Paste</item>
+    </menu>
+
+</menu>

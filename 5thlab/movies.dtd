@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT movies (movie*)>
+<!ELEMENT movie (title+, year, genre+, rating, votes)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT rating (#PCDATA)>
+<!ELEMENT votes (#PCDATA)>
+<!ATTLIST title xml:lang NMTOKEN #REQUIRED>
+<!ATTLIST 
+movie id CDATA #REQUIRED
+mpa-rating (G|NC-17|PG|PG-13|R) #IMPLIED
+>
